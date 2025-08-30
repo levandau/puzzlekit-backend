@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/dist/index.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "DB_HOST": "mysql.hawkhost.com",
+    "DB_PORT": "3306", 
+    "DB_USER": "novaaipl_puzzlekit",
+    "DB_PASSWORD": "LEga1993@@",
+    "DB_NAME": "novaaipl_puzzlekit",
+    "JWT_SECRET": "puzzlekit-production-secret-key-2024-super-secure",
+    "FRONTEND_URL": "https://puzzlekit.leosterling.net",
+    "ALLOWED_ORIGINS": "https://puzzlekit.leosterling.net,https://puzzlekit-backend.vercel.app"
+  }
+}
